@@ -1,0 +1,75 @@
+1. Cricket DB - name , average, no of runs, no of wickets
+
+CREATE PRIMARY INDEX on Cricket_Bucket;
+
+INSERT INTO Cricket_Bucket VALUES
+("1", {
+ "Player" : "Virat Kohli",
+ "runs" : 22000,
+ "age" : 31,
+ "average" : 51.35,
+ "cneturies" : 70 ,
+ "wickets": 6
+})
+
+INSERT INTO Cricket_Bucket VALUES
+("2", {
+ "Player" : "Rohit Sharma",
+ "runs" : 15006,
+ "age" : 33,
+ "average" : 61.81,
+ "cneturies" : 26 ,
+ "wickets": 26
+})
+
+INSERT INTO Cricket_Bucket VALUES
+("3", {
+ "Player" : "MS Dhoni",
+ "runs" : 22154,
+ "age" : 39,
+ "average" : 42.75,
+ "cneturies" : 20 ,
+ "wickets": 1
+})
+
+INSERT INTO Cricket_Bucket VALUES
+("4", {
+ "Player" : "Kane Williamson",
+ "runs" : 18475,
+ "age" : 29,
+ "average" : 59.81,
+ "cneturies" : 29 ,
+ "wickets": 14
+})
+
+INSERT INTO Cricket_Bucket VALUES
+("5", {
+ "Player" : "Steve Smith",
+ "runs" : 10475,
+ "age" : 30,
+ "average" : 65.81,
+ "cneturies" : 29 ,
+ "wickets": 16
+})
+
+INSERT INTO Cricket_Bucket VALUES
+("6", {
+ "Player" : "Jasprit Bumrah",
+ "runs" : 61,
+ "age" : 25,
+ "average" : 15.81,
+ "cneturies" : 0 ,
+ "wickets": 167
+})
+
+2. search where the no of runs getter than a paticular value
+
+SELECT * FROM Cricket_Bucket WHERE runs > 10000;
+SELECT * FROM Cricket_Bucket WHERE runs > 15000;
+SELECT * FROM Cricket_Bucket WHERE runs > 20000;
+
+3. Remove primary index and add a particular index
+
+DROP PRIMARY INDEX ON Cricket_Bucket;
+CREATE INDEX runs ON Cricket_Bucket(runs);
+
