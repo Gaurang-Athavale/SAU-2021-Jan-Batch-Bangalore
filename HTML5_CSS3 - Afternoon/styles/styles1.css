@@ -1,0 +1,156 @@
+html{
+    scroll-behavior:smooth ;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto Mono";
+    background-color: lightgray;
+}
+
+.main_area{
+    background: lightgrey;
+}
+
+.header{
+    padding: 16px;
+    background-color: #333333;
+    color: white;
+}
+
+footer {
+    background: #333333;
+    padding: 16px;
+}
+
+.container{
+    font-size: 24px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    width: 10%;
+    height: 10%;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px 8px rgba(0,0,0,0.2);
+}
+
+h3{
+    text-align: center;
+    color: #333333;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+ul.contact{
+    justify-content: center;
+}
+
+li {
+    list-style: none;
+    padding: 16px;
+    text-align: center;
+}
+
+
+li a {
+    color: white
+}
+
+div img{
+    width:100px;
+    height: 100px;
+
+    padding: 15%;
+}
+div.skills{
+    padding: 16px;
+    text-align: center;
+}
+
+.page_section{
+    font-size: 18px;
+    color: #333333;
+    max-width: 540px;
+    text-align: center;
+    margin: 15px auto;
+}
+
+.lang{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.item{
+    flex-grow: 0;
+    justify-content: space-evenly;
+    height: 100px;
+    flex-direction: column;
+}
+
+.item + .item {
+    margin-left: 7%;
+}
+
+.proj {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding-left: 5%;
+    justify-content: center;
+    align-content: center;
+}
+
+.card1{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-color: #f1f1f1;
+    width: 80%;
+    border-radius: 10px;
+  }
+
+.button {
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 2px;
+    color: #000 !important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 5px 5px;
+    text-transform: uppercase;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.profile img {
+    height:150%;
+    width: 85%;
+    padding: 10%;
+}
+
+.column{
+    float: left;
+    width: 15%;
+}
