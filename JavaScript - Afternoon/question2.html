@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="./question2.js"></script>
+    <title>Exercise 2</title>
+</head>
+<body>
+    <form id="myform">
+        <label>Enter First Name: </label>
+        <input type="text" id="Fname" placeholder="Enter your First Name">
+        <br><br>
+        <label>Enter Last Name: </label>
+        <input type="text" id="Lname" placeholder="Enter your Last Name">
+        <br><br>
+
+        <label>Gender</label>
+        <input type="radio" name="gender" value = "Male">Male
+        <input type="radio" name="gender" value="Female">Female
+        <br><br>
+        
+        <label>Enter Age: </label>
+        <input type="number" id="age" placeholder="Enter your Age">
+        <br><br>
+        
+        <label>Enter E-mail Address: </label>
+        <input type="text" id="email" placeholder="Enter your E-mail address">
+        <br><br>
+        <label>Enter Roll No. </label>
+        <!-- <br><br> -->
+        <input type="text" id="roll" placeholder="Enter your Roll Number">
+        <br><br>
+
+        <label for="Preference">Branch Preference: </label>
+        <!-- <br> -->
+        <select id="branch">
+            <option value="COMPS">COMPS</option>
+            <option value="IT">IT</option>
+            <option value="MECH">MECH</option>
+            <option value="EXTC">EXTC</option>
+            <option value="ETRX">ETRX</option>
+        </select>
+        <br><br>
+        <button type="submit" onClick="add_Occupation(event)">SUBMIT</button>
+        <br>
+        <br>
+
+        <label id="Occupation_input" style="display: none;">Enter occupation: </label>
+        <input type="text" placeholder="Enter Occupation" id="Occupation" style="display:none"><br><br>
+        <button type="button" onClick="validate(event)" style="display:none" id="finalizeDetails">Finalize</button>
+    </form>
+    <p style = "display: none; background-color: lightgray;" id="printDetails">
+        These are your details: <br><br>
+        First Name: <span id="fname_Output"></span>  <br>
+        Last Name: <span id="lname_Output"></span> <br>
+        Age: <span id="age_Output"></span> <br>
+        Email Address: <span id="email_Output"></span> <br>
+        Gender: <span id="gender_Output"></span> <br>
+        Roll Number: <span id="roll_Output"></span> <br>
+        Branch: <span id="branch_Output"></span> <br>
+        Occupation: <span id="occupation_Output"></span> <br>
+    </p>
+</body>
+</html>
