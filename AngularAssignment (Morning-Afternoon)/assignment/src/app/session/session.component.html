@@ -1,0 +1,35 @@
+<div style="text-align: center;">
+<!-- <p>session works!</p> -->
+
+<input type="text" placeholder="Session Name" [(ngModel)] = "session_name"><br><br>
+<input type="text" placeholder="Trainer Name" [(ngModel)] = "trainer_name"><br><br>
+<input type="date" placeholder="Date of Session" [(ngModel)] = "session_date"><br><br>
+<button type="submit" (click) = "addSession()">Add Item</button>
+
+<ul>
+    <li *ngFor = "let session of sessions" (click)="onSelect(session)">
+        <br>
+        Trainer: {{session.trainer}} <br>
+        Session: {{session.name}} <br>
+        Date: {{session.date}} <br>
+        <button type="submit" [class] = "session.date" (click) = "editSession(session.date)">Edit Item</button><br>
+        <div style="display: none;" [id]="session.date">
+            <input type="text" placeholder="Session Name" [(ngModel)] = "edited_session_name"><br><br>
+            <input type="text" placeholder="Trainer Name" [(ngModel)] = "edited_trainer_name"><br><br>
+            <input type="date" placeholder="Date of Session" [(ngModel)] = "edited_session_date"><br><br>
+            <button (click) = "submitEditedDetails(session.date)">Submit Edited Details</button>
+            <button (click) = "cancelSelection(session.date)">Cancel</button>
+        </div>
+        <br>
+        <button id="delete" (click) = "deleteSession(session.date)">Delete</button>
+    </li>
+</ul>
+
+<hr>
+
+<p><b>Selected session:</b> <br>
+<b>Session Name:</b> {{selectedSession.name}}</p>
+<p><b>Session Trainer:</b> {{selectedSession.trainer}}</p>
+<p><b>Session Date: </b> {{selectedSession.date}}</p>
+
+</div>
