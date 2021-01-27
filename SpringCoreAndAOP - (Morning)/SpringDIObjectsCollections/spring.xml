@@ -9,9 +9,9 @@
          <ref bean = "PointC"/>       
     </list>-->
     <!-- <map>
-    	 <ref bean = "PointA"/>
-         <ref bean = "PointB"/>
-         <ref bean = "PointC"/>
+    	  <entry key="PointA" value-ref="PointA"></entry>
+	    	<entry key="PointB" value-ref="PointB"></entry>
+	    	<entry key="PointC" value-ref="PointC"></entry>
     </map> -->
     <set>
     	 <ref bean = "PointA"/>
