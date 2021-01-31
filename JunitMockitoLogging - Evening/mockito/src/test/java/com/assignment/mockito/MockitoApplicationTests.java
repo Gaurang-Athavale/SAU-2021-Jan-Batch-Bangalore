@@ -16,7 +16,6 @@ class MockitoApplicationTests {
 
 	@Test
 	public void testToUpperCase() {
-		System.out.println("Testing toUpperCase Method");
 		Mock1 mock1 = mock(Mock1.class);
 		when(mock1.getName()).thenReturn("GAURANG");
 		String str = mock2.convertToLowerCase(mock1);
@@ -25,7 +24,6 @@ class MockitoApplicationTests {
 
 	@Test
 	public void testSum() {
-//		System.out.println("Testing Average Method");
 		Mock1 demo1 = mock(Mock1.class);
 		int arr[] = {1, 2, 3, 4};
 		when(demo1.getMarks()).thenReturn(arr);
@@ -35,7 +33,6 @@ class MockitoApplicationTests {
 
 	@Test
 	public void testgetMax(){
-		System.out.println("Testing Max Method");
 		Mock2 obj = mock(Mock2.class);
 		int arr[] = {64, 128, 256, 512, 1024};
 		when(obj.getNumbers()).thenReturn(arr);
@@ -45,7 +42,6 @@ class MockitoApplicationTests {
 
 	@Test
 	public void testSubstring(){
-		System.out.println("Testing SubString Method");
 		Mock2 obj = mock(Mock2.class);
 		String str = "Gaurang Athavale";
 		when(obj.getDepartment()).thenReturn(str);
