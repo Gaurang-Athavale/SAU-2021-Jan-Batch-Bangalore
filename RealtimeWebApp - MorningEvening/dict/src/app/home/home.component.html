@@ -1,0 +1,56 @@
+  <section class="home-page">
+    <div class="home-page-container">
+      <div class="list-of-word">
+        <span class="word-heading">
+          <p>Words</p>
+        </span>
+        <button routerLink="/addWord">Add New Word</button>
+      <br><br>
+
+        <form [formGroup]="form" (ngSubmit)="sort()">
+          <div class="form-group">
+            <label for="sortBy">Sort words by:</label>
+            <select (change)="sort()" formControlName="sortBy" class="form-control">
+              <option>Id</option>
+              <option *ngFor="let sortby of sortingList">{{sortby}}</option>
+            </select>
+          </div>
+        </form>
+        <br>
+  
+        <form [formGroup]="patternForm" (ngSubmit)="patternMatch()">
+          <div class="form-group">
+            <input formControlName="pattern" placeholder="Enter Pattern to be searched" /><br>
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </div>
+          <br>
+        </form>
+
+        <div *ngIf="words.length == 0">
+          No words found with the entered pattern.
+        </div>
+        <ng-template ngFor let-word [ngForOf]="words">
+          <div class="word">
+            <div class="meaning">
+              <strong>Id: </strong>{{word.id}} <br>
+              <strong>Word: </strong>{{ word.word }} <br>
+              <strong>Part Of Speech: </strong>{{ word.partOfSpeech }}<br>
+              <strong>Meaning: </strong>{{ word.meaning }}<br>
+              <strong>Example Sentence: </strong>{{ word.example }}
+            </div>
+            <div class="buttons">
+              <button (click)="edit(word)">
+                Edit
+              </button>
+              <button (click)="delete(word)">
+                Delete
+              </button>
+            </div>
+          </div>
+        </ng-template>
+      </div>
+      <div class="edit-word" id="edit-word" style="display: none;">
+        <app-update [action]="'Update Word'" [editableData]="editableWord" (updateWord)="updateWord($event)"></app-update>
+      </div>
+    </div>
+  </section>
